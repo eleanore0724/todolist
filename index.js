@@ -46,6 +46,10 @@ function delData(e){
   updateList(dataBase);//在網頁上更新資訊
 }
 
+function idRemove(e){
+  
+}
+
 var db = firebase.database();
 
 data = {
@@ -62,7 +66,7 @@ todos
 
 db.ref().set(data);
 db.ref('/student1/name').set('Jack');
-db.ref('myName').set('hello');
+db.ref('myName').push('ppp');
 
 //-------------- once
 /*myName.once('value', snap => {
@@ -91,9 +95,11 @@ todos.push({content:'ㄅㄞ不出來了!'});
 
 // child 子路徑：移至根目錄下的 todos 
 var todos = db.ref('todos')
-// remove 移除：移除todos下的 -L1H5cAAQnE9y72dCpJ7(要去看電影)
-todos.child('-NXo5_kFJm0bORVKq3Zb').remove();
 
+
+// remove 移除：移除todos下的 -L1H5cAAQnE9y72dCpJ7(要去看電影)
+//todos.child('-NXo5_kFJm0bORVKq3Zb').remove();
+// db.ref('/todos/').remove();
 // let student2 = db.ref('student2');
 // console.log(student2.child('name').remove())
 

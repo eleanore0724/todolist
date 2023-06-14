@@ -1,5 +1,16 @@
 {
   "dependencies": {
     "firebase": "^9.22.2"
-  }
+  },
+    "name": "es6_commonjs",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  
 }

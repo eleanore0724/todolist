@@ -24,9 +24,22 @@ todoListFromDB.on('value', snap =>{
 });
 
 function addData(e){
-    e.preventDefault();
-    let content = todoContent.value;
-    todoListFromDB.push(content);
+    
+    let data =  todoContent.value;
+    fetch('http://10.2.201.197:8000', {
+        method : "POST",
+        headers : {
+            "Content-Type" : "application/json"
+        },
+        body : JSON.stringify({data : data})
+    }).then(res =>{
+        return res.json();
+    }).then( data =>{
+        console.log(data);
+    })
+    // e.preventDefault();
+    // let content = todoContent.value;
+    // todoListFromDB.push(content);
 }
 
 function delData(e){
